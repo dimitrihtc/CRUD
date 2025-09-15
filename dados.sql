@@ -1,6 +1,3 @@
-DROP TABLE demo;
-
-/* CARGOS */
 CREATE TABLE `cargos` (
   `CargoID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome` varchar(45) DEFAULT NULL,
@@ -21,7 +18,6 @@ INSERT INTO `cargos` (`CargoID`,`Nome`,`TetoSalarial`) VALUES
  (10,'Auxiliar de operação',1785.75);
 
 
-/* SETOR */
 CREATE TABLE `setor` (
   `SetorID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome` varchar(45) DEFAULT NULL,
@@ -39,7 +35,6 @@ INSERT INTO `setor` (`SetorID`,`Nome`,`Andar`,`Cor`) VALUES
  (6,'Produção 2',5,'Laranja'),
  (7,'Produção 3',6,'Cinza');
 
-/* FUNCIONARIO */
 CREATE TABLE `funcionarios` (
   `FuncionarioID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome` varchar(100) DEFAULT NULL,
@@ -85,7 +80,6 @@ INSERT INTO `funcionarios` (`FuncionarioID`,`Nome`,`DataNascimento`,`Email`,`Ram
  (19,'Nilmar Ribeiro Pereira','1988-02-04','NilmarRibeiroPereira@teleworm.us','1500',10,5,1700,'M',1.79,'2345482388','123545125'),
  (20,'Geanny Oliveira Dias','1995-07-14','GeannyOliveiraDias@tele.us','1500',10,5,1700,'F',1.68,'8234482323','6545d4sdf');
 
-/* CATEGORIA PRODUTO */
 CREATE TABLE `categorias` (
   `CategoriaID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome` varchar(45) DEFAULT NULL,
@@ -102,7 +96,6 @@ INSERT INTO `categorias` (`CategoriaID`,`Nome`,`Descricao`) VALUES
  (6,'Ferramentas Pesadas','Martelos, Marretas, Talhadeiras'),
  (7,'Ferramentas Automotivas','Chave estrelas, bocais');
 
-/* PRODUTO */
 CREATE TABLE `produtos` (
   `ProdutoID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome` varchar(45) DEFAULT NULL,
@@ -137,7 +130,6 @@ INSERT INTO `produtos` (`ProdutoID`,`Nome`,`Preco`,`CategoriaID`,`Referencia`,`D
  (14,'Armário para ferramentas',1500,1,'1563','Integer id lorem nec nibh pulvinar cursus et vel tellus. Fusce maximus placerat neque vitae consectetur. Nunc rutrum nibh est, tincidunt imperdiet odio iaculis eget. Ut elementum et justo et porta. Vestibulum iaculis erat et ipsum congue sodales. Fusce finibus hendrerit luctus. Donec fringilla congue faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed scelerisque vulputate dui eget ultrices. ',100);
 
 
-/* CLIENTES */
 CREATE TABLE `clientes` (
   `ClienteID` int(11) NOT NULL AUTO_INCREMENT,
   `Nome` varchar(45) DEFAULT NULL,
@@ -157,7 +149,6 @@ INSERT INTO `clientes` (`ClienteID`,`Nome`,`Telefone`,`Email`,`Endereco`,`CNPJ`,
  (3,'Bruno Melo Lima','(47) 2641-1438','BrunoMeloLima@toolsmax.com.br','Rua Francisco Sanguedo, 1466','1461152599','SC','Florianópolis','ToolsMax'),
  (4,'Lucas Alves Cardoso','(34) 2416-9794','LucasAlvesCardoso@rhyta.com','Rua Francisco Paulo Mamede, 1847','6423885674','MG','','Loja Rhyta.com');
 
-/* PRODUCAO DE PRODUTOS */
 CREATE TABLE `producao` (
   `ProducaoID` int(11) NOT NULL AUTO_INCREMENT,
   `ProdutoID` int(11) DEFAULT NULL,
